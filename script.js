@@ -52,6 +52,13 @@ function addTask(){
 
     const taskSpan = li.querySelector("span");
     const deleteBtn = li.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", function(){
+        if (confirm("Are you sure ypu want to delete this task?")) {
+            li.remove();
+            updateCounter();
+        }
+    });
+
 
 
 
